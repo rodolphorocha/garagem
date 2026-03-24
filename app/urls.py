@@ -16,13 +16,15 @@ from core.views import (
   UserRegistrationView,
   UserViewSet,
   AcessorioViewSet,
-  CorViewSet,)
+  CorViewSet,
+  ModeloViewSet,)
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r'acessorios', AcessorioViewSet, basename='acessórios')
 router.register(r'cores', CorViewSet, basename='cores')
+router.register(r'modelos', ModeloViewSet, basename='modelos')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
